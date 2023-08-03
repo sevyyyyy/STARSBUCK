@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+.btn{
+    display:inline-block;
+    padding:1rem;
+    border:1px solid transparent;
+}
+
+@layer components{
+    .header{
+        @apply bg-white
+    }
+    .header .header__wrapper{
+        @apply bg-pink-300 max-w-[100rem] mx-auto flex items-center justify-between p-[1rem]
+    }
+    .header .branding img{
+        @apply w-[4rem]
+    }
+    .header .branding{
+        @apply flex items-center gap-[1rem]
+    }
+    .header .header__nav{
+        @apply flex gap-[1rem] text-white
+    }
+    .header .header__nav li#find, .header .header__nav li#sign, .header .header__nav li#join{
+        @apply lg:hidden
+    }
+    .toggle__menu span{
+        @apply w-[2rem] h-[.2rem] m-[.3rem] bg-black block rounded-[.5rem]
+    }
+}
