@@ -10,25 +10,37 @@
 <body>
 
     <header class="header">
+        <div class="container">
             <div class="header__wrapper">
                 <div class="branding">
-                    <img src="./img/sblogo.svg" alt="">
+                    <img src="./img/sblogo.svg" alt="" class="w-[3rem]">
                     <ul class="header__nav">
                         <li><a href="">Menu</a></li>
                         <li><a href="">Merchandise</a></li>
                         <li><a href="">Rewards</a></li>
                         <li id="find"><a href=""> Find a Store</a></li>
-                        <li id="sign"><a href="">Sign in</a></li>
-                        <li id="join"><a href="">Join Now</a></li>
+                        <li id="sign" class="btn white"><a href="">Sign in</a></li>
+                        <li id="join" class="btn black text-white lg:text-black"><a href="">Join Now</a></li>
                     </ul>
-                    <div class="toggle__menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
                 </div>
+
+                <div class="toggle__menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="header__actions">
+                    <ul>
+                        <li><a href=""> Find a Store</a></li>
+                        <li><a href="" class="btn white">Sign in</a></li>
+                        <li class="text-white"><a href="" class="btn black">Join Now</a></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
+                
     </header>
 
     <script src="./script.js"></script>

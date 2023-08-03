@@ -5,34 +5,52 @@
 .container {
     max-width: 100rem;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 .btn{
     display:inline-block;
-    padding:1rem;
+    padding:.3rem 1.5rem;
     border:1px solid transparent;
+}
+.btn.white{
+    border-radius: 5rem;
+    border: 1px solid black;
+}
+.btn.black{
+    border-radius: 5rem;
+    border: 1px solid black;
+    background: black;
 }
 
 @layer components{
     .header{
-        @apply bg-white
+        @apply  border-b-2
     }
     .header .header__wrapper{
-        @apply bg-pink-300 max-w-[100rem] mx-auto flex items-center justify-between p-[1rem]
-    }
-    .header .branding img{
-        @apply w-[4rem]
+        @apply flex items-center justify-between p-[1rem]
     }
     .header .branding{
         @apply flex items-center gap-[1rem]
     }
     .header .header__nav{
-        @apply flex gap-[1rem] text-white
+        @apply  bg-pink-300 absolute right-[-24rem] top-[7rem] gap-[1rem] h-[100vh] w-[75vw] transition-all lg:flex lg:flex-row lg:static lg:h-0 lg:items-center
+    }
+    .header .header__nav.open{
+        @apply absolute right-0 transition-all
     }
     .header .header__nav li#find, .header .header__nav li#sign, .header .header__nav li#join{
         @apply lg:hidden
     }
     .toggle__menu span{
-        @apply w-[2rem] h-[.2rem] m-[.3rem] bg-black block rounded-[.5rem]
+        @apply w-[2rem] h-[.2rem] m-[.3rem] bg-black block rounded-[.5rem] lg:hidden
+    }
+    .header .header__actions{
+        @apply hidden lg:flex
+    }
+    .header .header__actions ul{
+        @apply lg:flex lg:flex-row
+    }
+    .header .header__nav li{
+        @apply text-[1.5rem] lg:text-[1rem] m-[1rem] lg:font-bold lg:uppercase
     }
 }
