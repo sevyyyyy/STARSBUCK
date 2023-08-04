@@ -24,16 +24,16 @@
 
 @layer components{
     .header{
-        @apply  border-b-2
+        @apply border-b-2 drop-shadow-md
     }
     .header .header__wrapper{
-        @apply flex items-center justify-between p-[1rem]
+        @apply max-w-[120rem] mx-auto flex items-center justify-between p-[1rem]
     }
     .header .branding{
-        @apply flex items-center gap-[1rem]
+        @apply flex items-center gap-[1rem] max-w-[auto]
     }
     .header .header__nav{
-        @apply  bg-pink-300 absolute right-[-24rem] top-[7rem] gap-[1rem] h-[100vh] w-[75vw] transition-all lg:flex lg:flex-row lg:static lg:h-0 lg:items-center
+        @apply  bg-white absolute right-[-24rem] top-[7.1rem] gap-[1rem] h-[100vh] w-[75vw] transition-all lg:flex lg:flex-row lg:static lg:h-0 lg:items-center lg:w-[69.9rem]
     }
     .header .header__nav.open{
         @apply absolute right-0 transition-all
@@ -42,15 +42,101 @@
         @apply lg:hidden
     }
     .toggle__menu span{
-        @apply w-[2rem] h-[.2rem] m-[.3rem] bg-black block rounded-[.5rem] lg:hidden
+        @apply w-[2rem] h-[.2rem] m-[.3rem] bg-black block rounded-[1rem] transition-all lg:hidden
+    }
+    .toggle__menu{
+        @apply hover:hover:bg-gray-300 p-1 rounded-full transition-all
+    }
+    .toggle__menu.open span:nth-child(1){
+        @apply rotate-45 translate-y-[.5rem] transition-all
+    }
+    .toggle__menu.open span:nth-child(2){
+        @apply opacity-0 transition-all
+    }
+    .toggle__menu.open span:nth-child(3){
+        @apply -rotate-45 translate-y-[-.5rem] transition-all
     }
     .header .header__actions{
         @apply hidden lg:flex
     }
     .header .header__actions ul{
-        @apply lg:flex lg:flex-row
+        @apply lg:flex lg:flex-row lg:items-center lg:gap-[1rem]
     }
     .header .header__nav li{
         @apply text-[1.5rem] lg:text-[1rem] m-[1rem] lg:font-bold lg:uppercase
+    }
+
+    .kalbo{
+        @apply bg-white
+    }
+    .kalbo__wrapper{
+        @apply bg-gray-600 py-[2rem]
+    }
+    .kalbo__nav{
+        @apply max-w-[25rem] flex flex-wrap gap-[2rem] mx-auto justify-center 
+    }
+    .kalbo__nav li{
+        @apply p-[.5rem] rounded-md text-white
+    }
+    .kalbo__nav li.active{
+        @apply bg-blue-600 
+    }
+    .kalbo__item__content{
+        @apply hidden
+    }
+    .kalbo__item__content img{
+        @apply w-[10rem] h-[auto] rounded-full bg-green px-[1rem]
+    }
+    .kalbo__item__content.active{
+        @apply flex gap-[2rem] items-center justify-center
+    }
+    .kalbo__desc__wrapper{
+        @apply bg-gray-300 p-[2rem]
+    }
+    .kalbo__text h2{
+        @apply text-[1.5rem] font-bold mb-[1rem]
+    }
+    .kalbo__text table tr td:first-child{
+        @apply font-semibold
+    }
+    .kalbo__text table tr{
+        @apply h-[5rem] flex flex-col
+    }
+
+    .coffee{
+        @apply bg-sblgreen
+    }
+    .coffee__header h1{
+        @apply text-[1.5rem] font-bold text-center
+    }
+    .coffee__wrapper{
+        @apply bg-sblgreen py-[2rem]
+    }
+    .coffee__nav{
+        @apply max-w-[30rem] flex flex-wrap gap-[2rem] mx-auto justify-center 
+    }
+    .coffee__nav li{
+        @apply text-[1.5rem] font-semibold p-[.5rem] text-black 
+    }
+    .coffee__nav li.active{
+        @apply underline 
+    }
+    .coffee__item__content{
+        @apply hidden bg-sbdgreen pb-[2rem]
+    }
+    .coffee__item__content.active{
+        @apply flex gap-[2rem] items-center justify-center
+    }
+    .coffee__item__content img{
+        @apply  w-[25rem] h-[auto]
+    }
+    .coffee__text table tr td:first-child{
+        @apply text-[1.5rem] font-bold
+    }
+    .coffee__text table tr td:last-child{
+        @apply w-[20rem] py-[1rem]
+    }
+    .coffee__text table tr{
+        @apply h-[5rem] flex flex-col
     }
 }
