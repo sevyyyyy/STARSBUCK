@@ -800,6 +800,8 @@ video {
 }
 
 .coffee__header h1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
@@ -808,8 +810,6 @@ video {
 .coffee__wrapper {
   --tw-bg-opacity: 1;
   background-color: rgb(241 248 245 / var(--tw-bg-opacity));
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .coffee__nav {
@@ -822,12 +822,27 @@ video {
   gap: 2rem;
 }
 
+@media (min-width: 1024px) {
+  .coffee__nav {
+    max-width: 35rem;
+  }
+}
+
 .coffee__nav li {
-  padding: .5rem;
+  --tw-translate-y: .2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   font-size: 1.5rem;
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .coffee__nav li {
+    --tw-translate-y: .7rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    padding: .5rem;
+  }
 }
 
 .coffee__nav li.active {
@@ -838,14 +853,27 @@ video {
   display: none;
   --tw-bg-opacity: 1;
   background-color: rgb(212 233 226 / var(--tw-bg-opacity));
-  padding-bottom: 2rem;
+  padding-bottom: 8rem;
+}
+
+@media (min-width: 1024px) {
+  .coffee__item__content {
+    padding-bottom: 4rem;
+  }
 }
 
 .coffee__item__content.active {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .coffee__item__content.active {
+    flex-direction: row;
+  }
 }
 
 .coffee__item__content img {
@@ -854,8 +882,20 @@ video {
 }
 
 .coffee__text table tr td:first-child {
+  width: 21rem;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.coffee__text table {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .coffee__text table {
+    text-align: left;
+  }
 }
 
 .coffee__text table tr td:last-child {

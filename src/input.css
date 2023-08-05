@@ -107,31 +107,34 @@
         @apply bg-sblgreen
     }
     .coffee__header h1{
-        @apply text-[1.5rem] font-bold text-center
+        @apply text-[1.5rem] font-bold text-center py-[1rem]
     }
     .coffee__wrapper{
-        @apply bg-sblgreen py-[2rem]
+        @apply bg-sblgreen
     }
     .coffee__nav{
-        @apply max-w-[30rem] flex flex-wrap gap-[2rem] mx-auto justify-center 
+        @apply flex flex-wrap max-w-[30rem] gap-[2rem] mx-auto justify-center lg:max-w-[35rem]
     }
     .coffee__nav li{
-        @apply text-[1.5rem] font-semibold p-[.5rem] text-black 
+        @apply text-[1rem] font-semibold text-black translate-y-[.2rem] lg:p-[.5rem] lg:translate-y-[.7rem] lg:text-[1.5rem]
     }
     .coffee__nav li.active{
         @apply underline 
     }
     .coffee__item__content{
-        @apply hidden bg-sbdgreen pb-[2rem]
+        @apply hidden bg-sbdgreen pb-[8rem] lg:pb-[4rem]
     }
     .coffee__item__content.active{
-        @apply flex gap-[2rem] items-center justify-center
+        @apply flex flex-col gap-[2rem] items-center justify-center lg:flex-row
     }
     .coffee__item__content img{
         @apply  w-[25rem] h-[auto]
     }
     .coffee__text table tr td:first-child{
-        @apply text-[1.5rem] font-bold
+        @apply text-[1.5rem] font-bold w-[21rem] items-center 
+    }
+    .coffee__text table{
+        @apply text-center lg:text-left
     }
     .coffee__text table tr td:last-child{
         @apply w-[20rem] py-[1rem]
