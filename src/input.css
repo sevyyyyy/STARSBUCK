@@ -21,8 +21,26 @@
     border: 1px solid black;
     background: black;
 }
+.btn.dgreen{
+    background: #1E3932;
+    color: #ffffff;
+    border:1px solid #ffffff;
+    border-radius: 5rem
+}
+.btn.dgreen:hover{
+    background-color: #006341;
+}
+.btn.lozol{
+    background: #00754a;
+    color: #ffffff;
+    border:1px solid #00754a;
+    border-radius: 5rem;
+}
 
 @layer components{
+
+    /* HEADER */
+
     .header{
         @apply border-b-2 drop-shadow-md
     }
@@ -66,7 +84,9 @@
         @apply text-[1.5rem] lg:text-[1rem] m-[1rem] lg:font-bold lg:uppercase
     }
 
-    .kalbo{
+    /* KALBO */
+
+    /* .kalbo{
         @apply bg-white
     }
     .kalbo__wrapper{
@@ -101,8 +121,10 @@
     }
     .kalbo__text table tr{
         @apply h-[5rem] flex flex-col
-    }
+    } */
 
+    /* COFFEE */
+    
     .coffee{
         @apply bg-sblgreen
     }
@@ -116,10 +138,10 @@
         @apply flex flex-wrap max-w-[30rem] gap-[2rem] mx-auto justify-center lg:max-w-[35rem]
     }
     .coffee__nav li{
-        @apply text-[1rem] font-semibold text-black translate-y-[.2rem] lg:p-[.5rem] lg:translate-y-[.7rem] lg:text-[1.5rem]
+        @apply text-[1rem] font-semibold text-black lg:p-[.5rem] border-b-4 lg:text-[1.5rem]
     }
     .coffee__nav li.active{
-        @apply underline 
+        @apply border-b-green
     }
     .coffee__item__content{
         @apply hidden bg-sbdgreen pb-[8rem] lg:pb-[4rem]
@@ -141,5 +163,79 @@
     }
     .coffee__text table tr{
         @apply h-[5rem] flex flex-col
+    }
+
+
+/* BANNER */
+
+    .banner{
+        background-image: url("./img/rewards/star.png");
+        background-size:cover;
+        background-color:#d4e9e2;
+        height:550px;
+        background-position-y:15rem;
+        background-repeat:no-repeat;
+        text-align:center;
+        
+        @media screen and (min-width:1024px){
+            background-position-y:5rem;
+            background-size:contain;
+            background-position-x:70rem;
+            height:700px;
+            text-align:unset;
+            display:flex;
+            align-items:center;
+        }
+    }
+    .banner__wrapper{
+        @apply flex flex-col 
+    }
+    .banner__wrapper h1{
+        @apply text-[1.5rem] font-bold w-[10.7rem] mx-auto lg:mx-0
+    }
+    .banner__wrapper p{
+        @apply py-[1rem]
+    }
+    .banner__wrapper a{
+        @apply w-[10rem] mx-auto lg:mx-0
+    }
+    .banner__wrapper span{
+        @apply py-[1rem]
+    }
+    .banner__wrapper span a{
+        @apply underline
+    }
+
+    /* getting */
+
+    .getting{
+        @apply bg-white
+    }
+    .getting__intro h1{
+        @apply text-center py-[.5rem] text-[2rem] font-bold
+    }
+    .getting__intro p{
+        @apply text-center py-[.5rem]
+    }
+    .getting__col{
+        @apply lg:grid lg:grid-cols-3 lg:gap-[3rem]
+    }
+    .getting__content{
+        @apply flex flex-row gap-[1rem] items-center lg:flex-col lg:text-center py-[3rem]
+    }
+    .getting__content h2{
+        @apply text-lozol font-bold border-2 border-lozol rounded-full px-[1rem] py-[.5rem]
+    }
+    .getting__kapatid{
+        @apply w-[22rem]
+    }
+    .getting__kapatid h3{
+        @apply font-bold
+    }
+    .getting__kapatid span{
+        @apply py-[1rem] 
+    }
+    .getting__kapatid a{
+        @apply text-lozol underline
     }
 }

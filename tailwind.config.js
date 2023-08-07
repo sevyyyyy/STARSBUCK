@@ -8,8 +8,13 @@ module.exports = {
         'black':'#000000',
         'white':'#ffffff',
         'sblgreen':'#f1f8f5',
-        'sbdgreen':'#d4e9e2'
-      }
+        'sbdgreen':'#d4e9e2',
+        'dgreen':'#1e3932',
+        'lozol':'#00754a'
+      },
+      backgroundImage:{
+        'star':"url('./img/rewards/star.png')"
+      },
     },
   },
   plugins: [],
