@@ -52,7 +52,9 @@ coffeeContent.forEach((coffee) => {
 
 const headerNav = document.querySelector(".header__nav");
 const toggleMenu = document.querySelector(".toggle__menu");
+const hair = document.querySelector(".buhok");
 toggleMenu.addEventListener("click", () => {
 headerNav.classList.toggle("open");
 toggleMenu.classList.toggle("open");
+hair.classList.toggle("open");
 });

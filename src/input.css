@@ -51,7 +51,7 @@
         @apply flex items-center gap-[1rem] max-w-[auto]
     }
     .header .header__nav{
-        @apply  bg-white absolute right-[-24rem] top-[7.1rem] gap-[1rem] h-[100vh] w-[75vw] transition-all lg:flex lg:flex-row lg:static lg:h-0 lg:items-center lg:w-[69.9rem]
+        @apply  bg-white absolute z-[999] right-[-24rem] top-[5.7rem] gap-[1rem] h-[100vh] w-[75vw] transition-all lg:flex lg:flex-row lg:static lg:h-0 lg:items-center lg:w-[69.9rem]
     }
     .header .header__nav.open{
         @apply absolute right-0 transition-all
@@ -82,6 +82,12 @@
     }
     .header .header__nav li{
         @apply text-[1.5rem] lg:text-[1rem] m-[1rem] lg:font-bold lg:uppercase
+    }
+
+    /* OVERLAY */
+
+    .buhok.open{
+        @apply h-[100vh] w-[100%] bg-black absolute z-[999] top-[5.6rem] left-[0] opacity-[.5] transition-all
     }
 
     /* KALBO */
@@ -135,31 +141,40 @@
         @apply bg-sblgreen
     }
     .coffee__nav{
-        @apply flex flex-wrap max-w-[30rem] gap-[2rem] mx-auto justify-center lg:max-w-[35rem]
+        @apply flex flex-wrap text-center mx-auto justify-center
     }
     .coffee__nav li{
-        @apply text-[1rem] font-semibold text-black lg:p-[.5rem] border-b-4 lg:text-[1.5rem]
+        @apply text-[1rem] font-semibold text-black p-[1.55rem] relative lg:p-[.5rem] lg:text-[1.5rem]
     }
-    .coffee__nav li.active{
-        @apply border-b-green
+    .coffee__nav li:after{
+        @apply content-[''] w-0 h-[3px] bg-lozol block absolute bottom-0 left-0 origin-bottom ease-in duration-[.5s]
+    }
+    .coffee__nav li.active:after{
+        @apply w-full ease-in duration-[.5s] mx-auto
     }
     .coffee__item__content{
-        @apply hidden bg-sbdgreen pb-[8rem] lg:pb-[4rem]
+        @apply p-[1.5rem] absolute top-[4rem] opacity-0 ease-in duration-300 lg:flex lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:max-w-[50rem] lg:top-[8rem] mx-auto
     }
     .coffee__item__content.active{
-        @apply flex flex-col gap-[2rem] items-center justify-center lg:flex-row
+        @apply opacity-[1] top-0 ease-in duration-[.5s]
     }
+    .coffee__desc__wrapper{
+        @apply items-center justify-center text-center mx-auto
+    }
+    /* .coffee__item__content.active{
+        @apply flex flex-col gap-[2rem] items-center justify-center lg:flex-row
+    } */
     .coffee__item__content img{
         @apply  w-[25rem] h-[auto]
     }
     .coffee__text table tr td:first-child{
-        @apply text-[1.5rem] font-bold w-[21rem] items-center 
+        @apply text-[1.5rem] font-bold w-[21rem] items-center mx-auto
     }
     .coffee__text table{
         @apply text-center lg:text-left
     }
     .coffee__text table tr td:last-child{
-        @apply w-[20rem] py-[1rem]
+        @apply w-[20rem] py-[1rem] mx-auto
     }
     .coffee__text table tr{
         @apply h-[5rem] flex flex-col
@@ -218,16 +233,16 @@
         @apply text-center py-[.5rem]
     }
     .getting__col{
-        @apply lg:grid lg:grid-cols-3 lg:gap-[3rem]
+        @apply lg:grid lg:grid-cols-3 lg:gap-[1rem]
     }
     .getting__content{
-        @apply flex flex-row gap-[1rem] items-center lg:flex-col lg:text-center py-[3rem]
+        @apply flex flex-row gap-[1rem] items-start py-[1rem] lg:flex-col lg:text-center lg:items-center lg:py-[3rem]
     }
     .getting__content h2{
         @apply text-lozol font-bold border-2 border-lozol rounded-full px-[1rem] py-[.5rem]
     }
     .getting__kapatid{
-        @apply w-[22rem]
+        @apply max-w-[22rem]
     }
     .getting__kapatid h3{
         @apply font-bold
@@ -237,5 +252,44 @@
     }
     .getting__kapatid a{
         @apply text-lozol underline
+    }
+
+    /* ENDLESS */
+
+    .endless{
+        @apply bg-white
+    }
+    .endless__intro{
+        @apply py-[1rem]
+    }
+    .endless__intro h1{
+        @apply text-center py-[.5rem] text-[2rem] font-bold
+    }
+    .endless__intro p{
+        @apply text-center py-[.5rem] lg:w-[41rem] lg:mx-auto
+    }
+    .endless__col{
+        @apply lg:grid lg:grid-cols-3 lg:gap-[1rem]
+    }
+    .endless__content{
+        @apply flex flex-row gap-[1rem] items-start py-[1rem] lg:flex-col lg:text-center lg:items-center lg:py-[3rem]
+    }
+    .endless__content img{
+        @apply w-[7rem] h-auto
+    }
+    .endless__kapatid{
+        @apply w-[23rem]
+    }
+    .endless__kapatid h3{
+        @apply font-bold
+    }
+    .endless__content p{
+        @apply py-[1rem]
+    }
+    .endless__content a{
+        @apply text-lozol underline
+    }
+    .endless__content a:hover{
+        @apply no-underline
     }
 }
