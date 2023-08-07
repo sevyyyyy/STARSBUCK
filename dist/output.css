@@ -848,8 +848,10 @@ video {
 .coffee__item__content {
   position: absolute;
   top: 4rem;
-  margin-left: auto;
-  margin-right: auto;
+  left: 50%;
+  max-width: 50rem;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   padding: 1.5rem;
   opacity: 0;
   transition-duration: 300ms;
@@ -858,12 +860,8 @@ video {
 
 @media (min-width: 1024px) {
   .coffee__item__content {
-    left: 50%;
     top: 8rem;
     display: flex;
-    max-width: 50rem;
-    --tw-translate-x: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 

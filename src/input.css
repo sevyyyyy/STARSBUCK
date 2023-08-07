@@ -153,13 +153,13 @@
         @apply w-full ease-in duration-[.5s] mx-auto
     }
     .coffee__item__content{
-        @apply p-[1.5rem] absolute top-[4rem] opacity-0 ease-in duration-300 lg:flex lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:max-w-[50rem] lg:top-[8rem] mx-auto
+        @apply p-[1.5rem] absolute top-[4rem] opacity-0 ease-in duration-300 lg:flex left-1/2 transform -translate-x-1/2 max-w-[50rem] lg:top-[8rem] 
     }
     .coffee__item__content.active{
         @apply opacity-[1] top-0 ease-in duration-[.5s]
     }
     .coffee__desc__wrapper{
-        @apply items-center justify-center text-center mx-auto
+        @apply items-center justify-center text-center mx-auto 
     }
     /* .coffee__item__content.active{
         @apply flex flex-col gap-[2rem] items-center justify-center lg:flex-row
