@@ -570,10 +570,11 @@ video {
 
 /* HEADER */
 
-.header {
-  border-bottom-width: 2px;
-  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+.header{
+  position:fixed;
+  position:relative;
+  width:100%;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .header .header__wrapper {
@@ -654,13 +655,14 @@ video {
 
 .toggle__menu {
   border-radius: 9999px;
-  padding: 0.25rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.toggle__menu:hover:hover {
+.toggle__menu:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
@@ -703,7 +705,7 @@ video {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
   }
 }
 
@@ -996,6 +998,10 @@ video {
   text-decoration-line: underline;
 }
 
+.banner__wrapper span a:hover {
+  text-decoration-line: none;
+}
+
 /* getting */
 
 .getting {
@@ -1162,6 +1168,192 @@ video {
 
 .endless__content a:hover {
   text-decoration-line: none;
+}
+
+/* CASH */
+
+.cash {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 240 235 / var(--tw-bg-opacity));
+}
+
+.cash__intro h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cash__intro p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .cash__intro p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 41rem;
+  }
+}
+
+.cash__dollar__one {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .cash__dollar__one {
+    margin-top: 3rem;
+    flex-direction: row;
+    gap: 5rem;
+  }
+}
+
+.cash__dollar__two {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .cash__dollar__two {
+    margin-top: 3rem;
+    flex-direction: row;
+    gap: 5rem;
+  }
+}
+
+.cash__first {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cash__first h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.cash__second {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.cash__second img {
+  width: 10rem;
+}
+
+.cash__second__text h3 {
+  font-weight: 600;
+}
+
+.cash__second__text p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .cash__second__text p {
+    width: 17rem;
+  }
+}
+
+.cash__third {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.cash__third img {
+  width: 10rem;
+}
+
+.cash__third__text h3 {
+  font-weight: 600;
+}
+
+.cash__third__text p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .cash__third__text p {
+    width: 17.9rem;
+  }
+}
+
+.cash__line span {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+  height: .1rem;
+  width: auto;
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+/* KEEP */
+
+@media (min-width: 1024px) {
+  .keep {
+    background-image: url('./img/rewards/keep-background.webp');
+    background-size: cover;
+    padding: 2rem;
+  }
+}
+
+.keep__wrapper {
+  position: relative;
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 233 226 / var(--tw-bg-opacity));
+  padding-bottom: 5rem;
+}
+
+.keep__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.keep__star__one img.desktop {
+  display: none;
+}
+
+.keep__star__one img.mobile{
+}
+
+.keep__star__two img.desktop {
+  display: none;
+}
+
+.keep__star__two img.mobile {
+  position: absolute;
+  right: 0px;
+}
+
+.keep__text {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.keep__text h1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.keep__text p {
+  text-align: center;
+}
+
+.keep__text img {
+  height: auto;
+  width: 15rem;
 }
 
 .relative {

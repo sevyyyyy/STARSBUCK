@@ -10,10 +10,12 @@ module.exports = {
         'sblgreen':'#f1f8f5',
         'sbdgreen':'#d4e9e2',
         'dgreen':'#1e3932',
-        'lozol':'#00754a'
+        'lozol':'#00754a',
+        'sbgray':'#f2f0eb'
       },
       backgroundImage:{
-        'star':"url('./img/rewards/star.png')"
+        'star':"url('./img/rewards/star.png')",
+        'keepbackground':"url('./img/rewards/keep-background.webp')"
       },
     },
   },
