@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+    font-family: ubuntu;
+    src: url("../fonts/Ubuntu-Regular.woff")
+}
+@font-face{
+    font-family: ubuntuBold;
+    src: url("../fonts/Ubuntu-Bold.woff")
+}
+
+body{
+    font-family:Ubuntu;
+}
+
 .container {
     max-width: 100rem;
     margin: 0 auto;
@@ -245,7 +258,7 @@
         @apply flex flex-row gap-[1rem] items-start py-[1rem] lg:flex-col lg:text-center lg:items-center lg:py-[3rem]
     }
     .getting__content h2{
-        @apply text-lozol font-bold border-2 border-lozol rounded-full px-[1rem] py-[.5rem]
+        @apply text-lozol font-bold border-2 border-lozol rounded-full px-[1rem] py-[.5rem] 
     }
     .getting__kapatid{
         @apply max-w-[22rem]
@@ -257,7 +270,7 @@
         @apply py-[1rem] 
     }
     .getting__kapatid a{
-        @apply text-lozol underline
+        @apply text-lozol underline hover:no-underline
     }
 
     /* ENDLESS */
@@ -362,30 +375,108 @@
         @apply bg-sbdgreen relative pb-[5rem]
     }
     .keep__content{
-        @apply flex flex-col
+        @apply flex flex-col gap-[1rem] lg:grid lg:grid-cols-3 lg:items-center mx-auto
     }
     .keep__star__one img.desktop{
-        @apply hidden
+        @apply hidden w-[20rem] lg:h-auto lg:mx-auto lg:block
     }
     .keep__star__one img.mobile{
-
+        @apply lg:hidden
     }
     .keep__star__two img.desktop{
-        @apply hidden
+        @apply hidden w-[20rem] lg:h-auto lg:mx-auto lg:block
     }
     .keep__star__two img.mobile{
-        @apply right-0 absolute
+        @apply right-0 absolute lg:hidden
     }
     .keep__text{
         @apply mx-[1rem]
     }
     .keep__text h1{
-        @apply text-[1.5rem] font-semibold text-center w-[15rem] mx-auto
+        @apply text-[1.5rem] font-semibold text-center w-[15rem] mx-auto py-[.5rem] lg:text-[2rem] lg:w-fit
     }
     .keep__text p{
-        @apply text-center
+        @apply text-center py-[.5rem]
     }
     .keep__text img{
-        @apply w-[15rem] h-auto 
+        @apply w-[15rem] h-auto mx-auto py-[.5rem]
+    }
+    .keep__text__inside span a{
+        @apply text-lozol underline text-center hover:no-underline
+    }
+    .keep__text__inside{
+        @apply text-center py-[.5rem]
+    }
+    .keep__text__button a{
+        @apply flex font-semibold justify-center mx-auto w-fit my-[.5rem]
+    }
+
+    /* QUES */
+
+    .ques{
+        @apply bg-white
+    }
+    .ques__content{
+        @apply lg:mx-[28rem] my-[3rem]
+    }
+    .ques__content h1{
+        @apply text-[1.5rem] font-bold py-[1rem]
+    }
+    .ques__content a{
+        @apply text-lozol underline hover:no-underline
+    }
+
+    /* REST */
+
+    .rest{
+        @apply bg-offwhite
+    }
+    .rest__wrapper{
+        @apply my-[.5rem]
+    }
+    .rest__intro{
+        @apply my-[1rem]
+    }
+    .rest__intro h1{
+        @apply my-[.5rem]
+    }
+    .rest__intro a{
+        @apply text-lozol underline hover:no-underline
+    }
+    .rest__content{
+        @apply flex flex-col gap-[1rem]
+    }
+    .rest__items__first{
+        @apply lg:flex lg:flex-row lg:gap-[1rem]
+    }
+    .rest__items__second{
+        @apply lg:flex lg:flex-row lg:gap-[1rem]
+    }
+    .rest__text__one{
+        @apply flex flex-col gap-[1rem] py-[1rem] lg:w-[107rem]
+    }
+    .rest__text__one h1{
+        @apply font-semibold
+    }
+    .rest__text__two{
+        @apply flex flex-col gap-[1rem] py-[1rem]
+    }
+    .rest__text__two h1{
+        @apply font-semibold
+    }
+    .rest__text__two a{
+        @apply text-lozol underline hover:no-underline
+    }
+    .rest__text__three{
+        @apply flex flex-col gap-[1rem] py-[1rem] lg:w-[130rem]
+    }
+    .rest__text__three h1{
+        @apply font-semibold
+    }
+    .rest__text__four{
+        @apply flex flex-col gap-[1rem] py-[1rem]
+    }
+    .rest__text__four h1{
+        @apply font-semibold
     }
 }
