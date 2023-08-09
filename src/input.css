@@ -501,7 +501,16 @@ body{
         @apply flex flex-row gap-[1rem] text-[1.5rem]
     }
     .footer__icons ul li a{
-        @apply text-white bg-black rounded-full py-[.5rem] px-[.6rem]
+        @apply text-white bg-black rounded-full py-[.5rem] px-[.6rem] transition-all 
+    }
+    .footer__icons ul li a#pisbok{
+        @apply px-[.8rem]
+    }
+    .footer__icons ul li a#pint{
+        @apply px-[.8rem]
+    }
+    .footer__icons ul li{
+        @apply hover:bg-gray-300 rounded-full py-[.7rem] px-[.5rem] transition-all
     }
     .footer__texts{
         @apply flex flex-col gap-[1.5rem] my-[1rem] lg:flex-row
@@ -532,5 +541,8 @@ body{
     }
     .about__nav ul.nav{
         @apply lg:flex lg:flex-row lg:gap-[3rem]
+    }
+    .about__nav ul.drop li{
+        @apply text-fontgray hover:text-black
     }
 }

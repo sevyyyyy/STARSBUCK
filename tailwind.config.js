@@ -12,6 +12,7 @@ module.exports = {
         'sbdgreen':'#d4e9e2',
         'dgreen':'#1e3932',
         'lozol':'#00754a',
+        'fontgray':'#8c9398',
         'sbgray':'#f2f0eb'
       },
       backgroundImage:{
