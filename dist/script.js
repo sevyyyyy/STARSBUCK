@@ -58,3 +58,11 @@ headerNav.classList.toggle("open");
 toggleMenu.classList.toggle("open");
 hair.classList.toggle("open");
 });
+
+const drop = document.querySelectorAll(".about__nav ul.nav li");
+drop.forEach((link) => {
+    link.addEventListener("click", () => {
+        link.nextElementSibling.classList.toggle("open");
+        link.querySelector("i").classList.toggle("open");
+    });
+});

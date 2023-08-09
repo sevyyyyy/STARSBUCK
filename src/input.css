@@ -160,7 +160,7 @@ body{
         @apply flex flex-wrap text-center mx-auto justify-center
     }
     .coffee__nav li{
-        @apply text-[1rem] font-semibold text-black p-[1.55rem] relative lg:p-[.5rem] lg:text-[1.5rem]
+        @apply text-[1rem] font-semibold text-black p-[1.54rem] relative lg:p-[.5rem] lg:text-[1.5rem]
     }
     .coffee__nav li:after{
         @apply content-[''] w-0 h-[3px] bg-lozol block absolute bottom-0 left-0 origin-bottom ease-in duration-[.5s]
@@ -478,5 +478,59 @@ body{
     }
     .rest__text__four h1{
         @apply font-semibold
+    }
+
+    /* LINE */
+
+    .line span{
+        @apply w-auto h-[.1rem] my-[1.5rem] bg-gray-400 block 
+    }
+
+    /* FOOTER */
+
+    .footer{
+        @apply bg-white
+    }
+    .footer__line span{
+        @apply w-auto h-[.1rem] my-[1rem] bg-gray-400 block
+    }
+    .footer__icons{
+        @apply my-[2rem]
+    }
+    .footer__icons ul{
+        @apply flex flex-row gap-[1rem] text-[1.5rem]
+    }
+    .footer__icons ul li a{
+        @apply text-white bg-black rounded-full py-[.5rem] px-[.6rem]
+    }
+    .footer__texts{
+        @apply flex flex-col gap-[1.5rem] my-[1rem] lg:flex-row
+    }
+    .footer__texts a{
+        @apply hover:underline
+    }
+    .footer__texts span{
+        @apply hidden lg:block
+    }
+
+    /* ABOUT */
+
+    .about{
+    
+    }
+    .about__nav ul.nav li a{
+        @apply flex items-center justify-between 
+    }
+    .about__nav ul.nav li a i{
+        @apply lg:hidden
+    }
+    .about__nav ul.drop{
+        @apply bg-white flex flex-col my-[1rem] gap-[.5rem] h-0 overflow-hidden lg:h-auto
+    }
+    .about__nav ul.drop.open{
+        @apply h-auto
+    }
+    .about__nav ul.nav{
+        @apply lg:flex lg:flex-row lg:gap-[3rem]
     }
 }
