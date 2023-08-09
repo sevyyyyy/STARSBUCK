@@ -1768,6 +1768,8 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+/* ADVERT */
+
 .relative {
   position: relative;
 }
@@ -1898,6 +1900,13 @@ body{
   background: #00754a;
   color: #ffffff;
   border:1px solid #00754a;
+  border-radius: 5rem;
+}
+
+.btn.trans{
+  background: transparent;
+  color: black;
+  border:1px solid black;
   border-radius: 5rem;
 }
 

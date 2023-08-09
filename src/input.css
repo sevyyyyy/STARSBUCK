@@ -49,6 +49,12 @@ body{
     border:1px solid #00754a;
     border-radius: 5rem;
 }
+.btn.trans{
+    background: transparent;
+    color: black;
+    border:1px solid black;
+    border-radius: 5rem;
+}
 
 @layer components{
 
@@ -545,4 +551,8 @@ body{
     .about__nav ul.drop li{
         @apply text-fontgray hover:text-black
     }
+    
+
+    /* ADVERT */
+
 }
