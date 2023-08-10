@@ -561,25 +561,22 @@ body{
     /* ADVERT */
 
     .advert__wrapper{
-        @apply bg-bayotlet my-[1.5rem] lg:mx-[18rem]
-    }
-    .advert__wrapper#ads2{
-        @apply bg-lozol text-white
-    }
-    .advert__wrapper#ads3{
-        @apply bg-indigagi
-    }
-    .advert__wrapper#ads4{
-        @apply bg-delaw
+        @apply my-[2rem] lg:mx-[auto] flex flex-col gap-[1.5rem] lg:max-w-[83rem]
     }
     .advert__content{
-        @apply lg:flex lg:flex-row
+        @apply lg:flex lg:flex-row 
     }
     .advert__content#ads1{
-        @apply lg:flex-row-reverse
+        @apply lg:flex-row-reverse bg-bayotlet
+    }
+    .advert__content#ads2{
+        @apply bg-lozol
     }
     .advert__content#ads3{
-        @apply lg:flex-row-reverse
+        @apply lg:flex-row-reverse bg-indigagi
+    }
+    .advert__content#ads4{
+        @apply bg-delaw
     }
     .advert__content img{
         @apply w-[41.5rem]
@@ -594,7 +591,7 @@ body{
         @apply text-[1.3rem] text-center w-[25rem] mx-auto py-[1rem] lg:w-[27rem]
     }
     .advert__text a{
-        @apply my-[1.5rem]
+        @apply my-[1.5rem] font-semibold
     }
 
     /* TEXTING */
