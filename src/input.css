@@ -55,6 +55,11 @@ body{
     border:1px solid black;
     border-radius: 5rem;
 }
+.btn.trans2{
+    color: white;
+    border:1px solid white;
+    border-radius: 5rem;
+}
 
 @layer components{
 
@@ -555,4 +560,46 @@ body{
 
     /* ADVERT */
 
+    .advert__wrapper{
+        @apply bg-bayotlet my-[1.5rem] lg:mx-[18rem]
+    }
+    .advert__wrapper#ads2{
+        @apply bg-lozol text-white
+    }
+    .advert__wrapper#ads3{
+        @apply bg-indigagi
+    }
+    .advert__wrapper#ads4{
+        @apply bg-delaw
+    }
+    .advert__content{
+        @apply lg:flex lg:flex-row
+    }
+    .advert__content#ads1{
+        @apply lg:flex-row-reverse
+    }
+    .advert__content#ads3{
+        @apply lg:flex-row-reverse
+    }
+    .advert__content img{
+        @apply w-[41.5rem]
+    }
+    .advert__text{
+        @apply text-center lg:flex lg:flex-col lg:justify-center lg:items-center lg:text-center lg:mx-auto
+    }
+    .advert__text h1{
+        @apply text-[1.5rem] font-bold text-center py-[1rem] lg:text-[3rem] lg:w-[27rem]
+    }
+    .advert__text p{
+        @apply text-[1.3rem] text-center w-[25rem] mx-auto py-[1rem] lg:w-[27rem]
+    }
+    .advert__text a{
+        @apply my-[1.5rem]
+    }
+
+    /* TEXTING */
+
+    .texting__content p{
+        @apply text-center text-[.9rem] lg:w-[45rem] lg:mx-auto lg:text-[1rem]
+    }
 }
